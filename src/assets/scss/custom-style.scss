@@ -1,0 +1,50 @@
+$navSize: 250px;
+$sidebarSize: 500px;
+
+
+
+// header {
+//     background-color: purple;
+//     display: flex;
+
+//     div:nth-child(1) {
+//       flex-basis: $navSize;
+//     }
+
+//     div:nth-child(2){
+//       flex: 1 0 auto;
+//     }
+
+//     div:nth-child(3) {
+//       flex-basis: $sidebarSize;
+//     }
+//   }
+.hideNav {
+    margin-left: -$navSize;
+  }
+
+  main {
+    flex: 1 0 auto;
+    display: flex;
+
+   
+
+    article {
+      flex: 1 0 auto;
+      background-color: grey;      
+    }
+
+    aside {
+      background-color: deepskyblue;
+      width: $sidebarSize;
+      transition: margin 0.25s ease;
+    }
+
+    aside.hideSidebar{
+      margin-right: -$sidebarSize;
+    }
+  }
+
+  footer {
+    background-color: lightblue;
+  }
