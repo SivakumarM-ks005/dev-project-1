@@ -59,3 +59,9 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
 
 ## https://codepen.io/z-/pen/MJxMKd (toggle)
+
+
+ngular:styles/global:styles:1:8:
+      1 │ @import 'src/styles.scss';
+$ npm install -g sass-migrator
+$ sass-migrator module --migrate-deps your-entrypoint.scss

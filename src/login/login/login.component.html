@@ -1,18 +1,19 @@
 <div class="login-layout">
     <div class="info-area">
-            <h1>WELCOME TO OUR WEB SITE</h1>
+            <h6>WELCOME TO OUR WEB SITE</h6>
     </div>
+    <form class="login">
     <div class="login-box">
-        <form class="login">
-            <h2>Welcome, User!</h2>
             <p>Please log in</p>
-            <input type="text" placeholder="User Name" />
-            <input type="password" placeholder="Password" />
-            <input type="submit" value="Log In" />
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="fname" value="John">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lname" value="Doe">
+            <button type="button" class="btn btn-primary">Login</button>
             <div class="links">
               <a href="#">Forgot password</a>
               <a href="#">Register</a>
             </div>
-          </form>
     </div>
+  </form>
 </div>

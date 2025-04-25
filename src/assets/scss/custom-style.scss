@@ -2,73 +2,100 @@ $navSize: 250px;
 $sidebarSize: 500px;
 
 body {
-  background: red;
+  background-color: rgb(235, 235, 235) !important;
 }
 
-// header {
-//     background-color: purple;
-//     display: flex;
 
-//     div:nth-child(1) {
-//       flex-basis: $navSize;
-//     }
+.header {
+  background-color: purple;
+  display: flex;
 
-//     div:nth-child(2){
-//       flex: 1 0 auto;
-//     }
-
-//     div:nth-child(3) {
-//       flex-basis: $sidebarSize;
-//     }
-//   }
-.hideNav {
-    margin-left: -$navSize;
+  div:nth-child(1) {
+    flex-basis: $navSize;
   }
 
-  main {
+  div:nth-child(2) {
     flex: 1 0 auto;
+  }
+
+  div:nth-child(3) {
+    flex-basis: $sidebarSize;
+  }
+}
+
+.hideNav {
+  margin-left: -$navSize;
+}
+
+main {
+  flex: 1 0 auto;
+  display: flex;
+
+
+
+  article {
+    flex: 1 0 auto;
+    background-color: grey;
+  }
+
+  aside {
+    background-color: deepskyblue;
+    width: $sidebarSize;
+    transition: margin 0.25s ease;
+  }
+
+  aside.hideSidebar {
+    margin-right: -$sidebarSize;
+  }
+}
+
+footer {
+  background-color: lightblue;
+}
+
+// ----------------- login page ------------------------- 
+.login-layout {
+  display: grid;
+  grid-template-columns: 70%  30%;
+  padding: 2%;
+
+  .info-area {
     display: flex;
-
-   
-
-    article {
-      flex: 1 0 auto;
-      background-color: grey;      
-    }
-
-    aside {
-      background-color: deepskyblue;
-      width: $sidebarSize;
-      transition: margin 0.25s ease;
-    }
-
-    aside.hideSidebar{
-      margin-right: -$sidebarSize;
-    }
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: start;
   }
 
-  footer {
-    background-color: lightblue;
+  .login-box {
+    display: flex;
+    // gap: 15px;
+    // flex-grow: 2;
+    width: 100%;
+    height: 100%;
+    background: #9dd3ff;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px 0px #888888;
+    input[type=text] {
+      width: 100%;
+      padding: 8px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      border: 1px solid #555;
+      outline: none;
+      border-radius: 8px;
+      &:focus{
+        background-color: rgb(229, 238, 247);
+      }
+    }
+    
+    // input[type=text]:focus {
+    //   background-color: lightblue;
+    // }
   }
-
-   ----------------- login page  -------------------------
-   .login-layout {
-    display: grid;
-    grid-template-columns: 70% 30%;
-    gap: 15px;
-
-    .info-area {
-      display: flex;
-      width: 100%;
-      height: 100%;
-      align-items: center;
-      justify-content: center;
-    }
-    .login-box{
-      display: flex;
-      width: 100%;
-      height: 100%;
-      align-items: center;
-      justify-content: center;
-    }
-   }
+}
