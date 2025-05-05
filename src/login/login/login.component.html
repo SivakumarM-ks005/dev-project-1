@@ -5,11 +5,11 @@
     <form class="login">
     <div class="login-box">
             <p>Please log in</p>
-            <label for="fname">First Name</label>
-            <input type="text" id="fname" name="fname" value="John">
-            <label for="lname">Last Name</label>
-            <input type="text" id="lname" name="lname" value="Doe">
-            <button type="button" class="btn btn-primary">Login</button>
+            <label for="fname">User Name</label>
+            <input type="text" id="EmailId" name="EmailId" [(ngModel)]="loginObj.EmailId" >
+            <label for="lname">Password</label>
+            <input type="password" id="Password" [(ngModel)]="loginObj.Password" name="Password">
+            <button type="button" (click)="login()" class="btn btn-primary">Login</button>
             <div class="links">
               <a href="#">Forgot password</a>
               <a href="#">Register</a>
