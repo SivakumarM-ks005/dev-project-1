@@ -8,10 +8,11 @@ app.use(cors());
 app.use(bodyParser.json());
 
 const connection = mysql.createConnection({
-  host:'localhost',
-  user:'root',
-  database:'demo',
-  password:'LogPwd@1310'
+   host: "localhost",
+    port: 3306,
+    database: "tcvdb",
+    user: "root",
+    password: "LogPwd@1310"
 });
 
 app.listen(3004,()=>{
