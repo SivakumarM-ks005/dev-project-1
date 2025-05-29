@@ -7,13 +7,22 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-const connection = mysql.createConnection({
+const dbConnection = mysql.createConnection({
    host: "localhost",
     port: 3306,
-    database: "tcvdb",
+    database: "devdb",
     user: "root",
     password: "LogPwd@1310"
 });
+
+dbConnection.connect(err=>{
+    if(err){
+        console.log(err,"connection failed")
+    }else{
+console.log('connection successfully')
+    }
+    
+})
 
 app.listen(3004,()=>{
     console.log('server is runing on port 3004');
