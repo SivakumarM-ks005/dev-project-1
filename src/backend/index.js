@@ -23,25 +23,22 @@ console.log('connection successfully')
     }
     
 });
+app.get('/user-details',(req, res)=>{
+    let userList =`SELECT * FROM user_details`;
+    dbConnection.query(userList, (err, results)=>{
+        if (err){
+            console.log("server error")
+        }
+        if (results.length>0){
+            return res.send({
+ message: 'server connected successfully',
+            data: results
+            })   
+           
+        }
+    })
+})
 
-// app.get('/user_details', (res, req)=>{
-//     console.log("postman is runing");
-//     let userList = `SELECT * FROM user_details`;
-//     dbConnection.query(userList, (err, results)=>{
-//         if(err){
-//             console.log(err, 'error');
-//         }
-//         if(results.length>0){
-//           res.send({
-//             data: results
-//           })
-//         }
-//     })
-// });
-
-app.get('/user_details', (req, res) => {
-  res.send('Hello, World!');
-});
 app.listen(3004,()=>{
     console.log('server is runing on port 3004');
 })
