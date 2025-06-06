@@ -1,0 +1,5 @@
+1. Install node js (recommended version)
+2.Mysql bench
+3. create project folder
+4. npm init ( in project path)
+5. Search the dependencies (https://www.npmjs.com/)
