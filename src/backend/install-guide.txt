@@ -1,5 +1,22 @@
+Tutorial url : https://www.youtube.com/watch?v=OH7_HzWQZqE&list=PLuHGmgpyHfRy-n9oj9R2mp3-EXTGbOqwY&index=3
 1. Install node js (recommended version)
 2.Mysql bench
 3. create project folder
 4. npm init ( in project path)
 5. Search the dependencies (https://www.npmjs.com/)
+6.Install express = npm i express 
+7. install nodemon = npm i nodemon
+8.  "scripts": {    
+    "server": "nodemon server.js" -- add this line in package.json
+  },
+
+  9. color installation i did not use here
+  npm i colors
+
+10.  install morgan(HTTP request logger middleware for node.js) =  npm i morgan
+11. Dotenv is a zero-dependency module that loads environment variables - npm i dotenv
+11. after installed dotenv - add .evn file in root
+12. install Mysql = npm i mysql2
+13. create config folder
+14. create db.js file
+15. add "routes" folder
