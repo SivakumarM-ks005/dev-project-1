@@ -6,6 +6,6 @@ const express = require("express");
 const router = express.Router();
 
 // get all user list
-router.get("/getall", getUser);
+router.get('/getall', getUser);
 
 module.exports = router;

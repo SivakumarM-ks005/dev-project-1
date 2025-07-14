@@ -2,7 +2,7 @@ const db = require("../config/db");
 
 const getUser = async (req, res) => {
     try{
-        const data = await db.query('SELECT * FROM employees');
+        const data = await db.query('SELECT * FROM user_details');
         if(!data){
            return res.status(404).send({
                 success: false,

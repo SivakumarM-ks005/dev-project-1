@@ -14,7 +14,7 @@ const app = express();
 app.use(express.json());
 app.use(morgan('dev'));
 // routes()
-// app.use('/api/v1/user', require('./routes/userRoutes'));
+app.use('/api/v1/user', require('./routes/userRoutes'));
 app.get('/test',(req, res)=>{
     res.status(200).send('<h1>Node js app </h1>')
 });
@@ -22,16 +22,16 @@ app.get('/test',(req, res)=>{
 const PORT = process.env.PORT || 8000;
 
 // conditionaly listen
-// db.query('SELECT 1').then(()=>{
-//     console.log("my sql db connected");
-// // listen
-// app.listen(PORT,()=>{
-//     console.log(`server is working ${process.env.PORT}`);
-// });
-// }).catch((error)=>{
-//     console.log(error);
-// });
-
+db.query('SELECT 1').then(()=>{
+    console.log("my sql db connected");
+// listen
 app.listen(PORT,()=>{
     console.log(`server is working ${process.env.PORT}`);
 });
+}).catch((error)=>{
+    console.log(error);
+});
+
+// app.listen(PORT,()=>{
+//     console.log(`server is working ${process.env.PORT}`);
+// });
